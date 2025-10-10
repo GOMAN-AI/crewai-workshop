@@ -18,7 +18,7 @@ services:
       - default
 
   phoenix:
-    image: arizephoenix/phoenix:version-11.0.0
+    image: arizephoenix/phoenix:version-12.4.0
     env_file: .env
     ports:
       - "6006:6006"
@@ -36,7 +36,7 @@ services:
       - default
 
   dind:
-    image: docker:27.5.0-dind-alpine3.21
+    image: docker:28.5.1-dind-alpine3.22
     command: --host=tcp://0.0.0.0:2375
     privileged: true
     environment:

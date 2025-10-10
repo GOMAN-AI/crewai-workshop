@@ -5,14 +5,14 @@ description = "Demos for CrewAI Workshop"
 authors = [{ name = "Valiantsin Zavadski", email = "val@awerty.ai" }]
 requires-python = ">=3.12,<3.13"
 dependencies = [
-    "arize-phoenix==11.0.0",
+    "arize-phoenix==12.4.0",
     "asyncio==3.4.3",
-    "crewai==0.130.0",
-    "crewai-tools==0.47.1",
-    "langchain_community==0.3.18",
-    "openinference-instrumentation-crewai==0.1.10",
-    "openinference-instrumentation-litellm==0.1.22",
-    "mem0ai>=0.1.56",
+    "crewai==0.203.0",
+    "crewai-tools==0.76.0",
+    "langchain_community==0.3.31",
+    "openinference-instrumentation-crewai==0.1.13",
+    "openinference-instrumentation-litellm==0.1.27",
+    "mem0ai>=0.1.118",
     "setuptools>=42",
     "youtube_search>=2.1.2",
     "wikipedia>=1.4.0",
