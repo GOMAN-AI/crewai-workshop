@@ -3,7 +3,7 @@ from crewai.project import CrewBase, agent, crew, task
 from .tools import WeatherForecastTool, WikipediaSearchToolWrapper
 from crewai_tools import SerperDevTool
 from crewai.knowledge.source.json_knowledge_source import JSONKnowledgeSource
-from langchain_openai import ChatOpenAI
+from shared.llm import OPENAI_O4_MINI_LLM
 
 user_json = JSONKnowledgeSource(
   file_paths=["user.json"]
@@ -21,6 +21,7 @@ class PersonalAssistantCrew():
     def google_researcher(self) -> Agent:
         return Agent(
             config=self.agents_config['google_researcher'],
+            reasoning=True,
             tools=[SerperDevTool()],
         )
 
@@ -52,6 +53,6 @@ class PersonalAssistantCrew():
             tasks=self.tasks,
             verbose=True,
             process=Process.hierarchical,
-            manager_llm=ChatOpenAI(temperature=0, model="o3-mini"),
+            manager_llm=OPENAI_O4_MINI_LLM,
             manager_agent=None,
         )

@@ -1,5 +1,8 @@
+import os
 from src.heads_or_tails.crew import HeadsOrTailsCrew
 from shared.tracing import traceable
+
+os.environ["DOCKER_HOST"] = "tcp://dind:2375"
 
 @traceable
 def main():
