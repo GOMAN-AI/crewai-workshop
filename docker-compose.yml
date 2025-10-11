@@ -13,6 +13,7 @@ services:
       - ./${DYNAMIC_DEMO_FOLDER}/run.py:/app/run.py
       - ./${DYNAMIC_DEMO_FOLDER}/src:/app/src/
       - ./${DYNAMIC_DEMO_FOLDER}/knowledge:/app/knowledge
+      - ./${DYNAMIC_DEMO_FOLDER}/memory:/app/memory
       - ./shared/:/app/src/shared/
     networks:
       - default

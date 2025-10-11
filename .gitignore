@@ -2,6 +2,7 @@
 .env
 demos/**/src/shared
 demos/**/src/knowledge
+demos/**/memory
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

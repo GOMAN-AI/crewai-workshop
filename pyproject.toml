@@ -12,7 +12,6 @@ dependencies = [
     "langchain_community==0.3.31",
     "openinference-instrumentation-crewai==0.1.13",
     "openinference-instrumentation-litellm==0.1.27",
-    "mem0ai>=0.1.118",
     "setuptools>=42",
     "youtube_search>=2.1.2",
     "wikipedia>=1.4.0",

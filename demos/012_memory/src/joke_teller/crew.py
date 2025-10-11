@@ -1,3 +1,4 @@
+import os
 from crewai import Agent, Crew, Task
 from crewai.project import CrewBase, agent, crew, task
 
@@ -26,8 +27,13 @@ class CreateJokeCrew():
             tasks=self.tasks,
             verbose=True,
             memory=True,
-            memory_config={
-                "provider": "mem0",
-                "config": {"user_id": self.user}
-            },
+            embedder={
+                "provider": "openai",
+                "config": {
+                    "api_key": os.getenv("OPENAI_API_KEY"),
+                    "model": "text-embedding-3-large",
+                    "dimensions": 1536,
+                }
+            }
+
         )
