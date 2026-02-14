@@ -17,6 +17,7 @@ RUN apt-get update \
   && mkdir -p /app/src
 
 COPY pyproject.toml .
+
 COPY entrypoint.sh .
 
 RUN pip install --no-cache-dir -e .

@@ -7,15 +7,22 @@ requires-python = ">=3.12,<3.13"
 dependencies = [
     "arize-phoenix==12.4.0",
     "asyncio==3.4.3",
-    "crewai==0.203.0",
-    "crewai-tools==0.76.0",
+    "crewai==1.6.1",
+    "crewai-tools[mcp]==1.6.1",
+    "langchain==1.2.6",
+    "langchain-core==1.2.7",
+    "langchain-openai>=0.3.0",
     "langchain_community==0.3.31",
-    "openinference-instrumentation-crewai==0.1.13",
+    "litellm==1.81.3",
+    "mcp>=1.0.0",
+    "openinference-instrumentation-crewai==0.1.17",
+    "openinference-instrumentation-langchain>=0.1.0",
     "openinference-instrumentation-litellm==0.1.27",
     "setuptools>=42",
     "youtube_search>=2.1.2",
     "wikipedia>=1.4.0",
     "pyowm>=3.3.0",
+    "pytz>=2024.1",
 ]
 
 [build-system]

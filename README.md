@@ -34,11 +34,12 @@ Required API keys:
 - `MEM0_API_KEY` - Get from [Mem0](https://mem0.ai/)
 - `SERPER_API_KEY` - Get from [Serper](https://serper.dev/)
 - `OPENWEATHERMAP_API_KEY` - Get from [OpenWeatherMap](https://openweathermap.org/api)
+- `GITHUB_PERSONAL_ACCESS_TOKEN` - Get from [GitHub Settings](https://github.com/settings/tokens)
 
 ### 3. Build the Docker container
 
 ```bash
-DEMO=1 dip crewai build
+docker compose build
 ```
 
 ## Running Demos
@@ -57,10 +58,12 @@ DEMO=1 dip crewai python run.py
 ## Workshop Plan
 
 - Basics (Agent / Task / Crew / LLM)
+- Basics with LangChain (Chain / Prompt / LLM)
 - Structured output (Pydantic)
 - Multiple agents (Multiple Tasks / Multiple Agents)
 - Tracing (Phoenix setup)
 - Tools (CrewAI Tools / LangChainTools)
+- MCP (MCPServerAdapter / GitHub MCP)
 - More building blocks (Conditional Tasks / Guardrails)
 - Tasks Advanced flows ( Async Tasks Executions )
 - CLI (Training / Testing / Chat)
