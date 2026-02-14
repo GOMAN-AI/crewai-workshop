@@ -22,7 +22,7 @@ class CreateJokeCrew():
     def google_researcher(self) -> Agent:
         return Agent(
             config=self.agents_config['google_researcher'],
-            tools=[SerperDevTool()],
+            # tools=[SerperDevTool()],
         )
 
     @agent
