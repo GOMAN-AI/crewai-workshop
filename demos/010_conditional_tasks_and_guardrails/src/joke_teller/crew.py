@@ -24,6 +24,8 @@ def not_enough_information(output: TaskOutput) -> bool:
 
 def validate_videos_information_correct(output: TaskOutput) -> Tuple[bool, Any]:
     information = output.pydantic
+    if information is None:
+        return (False, {"error": "Failed to parse output into structured format", "code": "PARSE_ERROR"})
     videos = information.videos
 
     if not videos:

@@ -6,6 +6,7 @@ authors = [{ name = "Valiantsin Zavadski", email = "val@awerty.ai" }]
 requires-python = ">=3.12,<3.13"
 dependencies = [
     "arize-phoenix==12.4.0",
+    "aioconsole>=0.8.0",
     "asyncio==3.4.3",
     "crewai==1.6.1",
     "crewai-tools[mcp]==1.6.1",

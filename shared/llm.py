@@ -10,6 +10,6 @@ LMSTUDIO_QWEN_2_5_7B_LLM = LLM(
     base_url="http://host.docker.internal:1234/v1",
 )
 
-OPENAI_O4_MINI_LLM = LLM(model="o4-mini", temperature=0.3)
+OPENAI_O4_MINI_LLM = LLM(model="o4-mini", temperature=1)
 
 __all__ = ["LMSTUDIO_DEEPSEEK_LLM", "LMSTUDIO_QWEN_2_5_7B_LLM", "OPENAI_O4_MINI_LLM"]
