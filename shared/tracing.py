@@ -19,10 +19,12 @@ PROJECT_NAME = os.getenv("PHOENIX_PROJECT_NAME")
 PHOENIX_COLLECTOR_ENDPOINT = os.getenv("PHOENIX_COLLECTOR_ENDPOINT")
 
 # Setup Phoenix tracer provider
-tracer_provider = register(project_name=PROJECT_NAME)
+tracer_provider = register(
+    project_name=PROJECT_NAME,
+    auto_instrument=True,
+    batch=True
+)
 tracer_provider.add_span_processor(SimpleSpanProcessor(OTLPSpanExporter(PHOENIX_COLLECTOR_ENDPOINT)))
-CrewAIInstrumentor().instrument(tracer_provider=tracer_provider)
-LiteLLMInstrumentor().instrument(tracer_provider=tracer_provider)
 
 # Get tracer
 tracer = trace.get_tracer(__name__)

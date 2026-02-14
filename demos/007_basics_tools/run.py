@@ -1,4 +1,5 @@
 from joke_teller.crew import CreateJokeCrew
+from shared.tracing import traceable
 from urllib.parse import urlparse
 
 def is_valid_url(url):
@@ -8,7 +9,8 @@ def is_valid_url(url):
     except:
         return False
 
-if __name__ == '__main__':
+@traceable
+def main():
     website = input("Enter a website for the joke: ")
     while not is_valid_url(website):
         print("Please enter a valid URL (e.g., https://example.com)")
@@ -16,4 +18,7 @@ if __name__ == '__main__':
 
     crew = CreateJokeCrew().crew()
     inputs = { "website": website }
-    result = crew.kickoff(inputs=inputs)
+    crew.kickoff(inputs=inputs)
+
+if __name__ == '__main__':
+    main()
